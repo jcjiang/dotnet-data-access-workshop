@@ -6,7 +6,46 @@ In this approach, we work with the existing populated PostgreSQL database from P
 
 Open your `dab-config.json` file and scroll down to the `entities` section.
 
-![Entities](image.png)
+```json
+"entities": {
+    "Author": {
+      "source": "authors",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            "*"
+          ]
+        }
+      ],
+      "relationships": {
+        "books": {
+          "cardinality": "many",
+          "target.entity": "Book",
+          "linking.object": "books_authors"
+        }
+      }
+    },
+    "Book": {
+      "source": "books",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            "*"
+          ]
+        }
+      ],
+      "relationships": {
+        "authors": {
+          "cardinality": "many",
+          "target.entity": "Author",
+          "linking.object": "books_authors"
+        }
+      }
+    }
+  }
+```
 
 There are two classes of entities - `Book` and `Author`, which draw from the `books` and `authors` tables in your database.
 
@@ -16,18 +55,69 @@ Each entity has its own fields - books have titles, while authors have first, mi
 
 Let's define our data model classes in C#. Include the following code in your `Model.cs` file.
 
-![Classes](image-2.png)
+```csharp
+public class Book
+{
+    public int id { get; set; }
+    public string title { get; set; }
+}
+
+public class Author
+{
+    public int id { get; set; }
+    public string first_name { get; set; }
+    public string? middle_name { get; set; }
+    public string last_name { get; set; }
+}
+```
 
 ## Define relationships
 
 Let's take a closer look at the `Author` entity `dab-config.json`.
 
-![Author](image-1.png)
+```json
+"Author": {
+      "source": "authors",
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            "*"
+          ]
+        }
+      ],
+      "relationships": {
+        "books": {
+          "cardinality": "many",
+          "target.entity": "Book",
+          "linking.object": "books_authors"
+        }
+      }
+    },
+```
 
 The `relationships` section describes what entities the `Author` entity has relationships with. In this case, it has a relationship with the `Book` entity with a cardinality of `many` - in other words, many books can be related to a single author. If you look at the `Book` entity, you will notice that it too has a many-to-one relationship with the `Author` entity - many authors can be related to a single book.
 
 In EF Core, many-to-one relationships are represented in the form of a `List` that is part of the data model class definition. Define a `List` in each of your `Author` and `Book` model classes.
 
-![Alt text](image-6.png)
+```csharp
+public class Book
+{
+    public int id { get; set; }
+    public string title { get; set; }
+
+    public List<Author> Authors { get; } = new();
+}
+
+public class Author
+{
+    public int id { get; set; }
+    public string first_name { get; set; }
+    public string? middle_name { get; set; }
+    public string last_name { get; set; }
+
+    public List<Book> Books { get; } = new();
+}
+```
 
 ## Next Steps

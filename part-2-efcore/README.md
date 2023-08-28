@@ -44,7 +44,24 @@ An instance of the DbContext class represents a session of work with EF Core. In
 
 Because our project is so simple, we will define our `DbContext` in the `Model.cs` file. The DbContext class for your project should look like this:
 
-![DbContext](image-3.png)
+```csharp
+
+public class LibraryContext : DbContext
+{
+    public DbSet<Book> books { get; set; }
+    public DbSet<Author> authors { get; set; }
+
+    // The following configures EF to use a locally hosted postgres database
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=dabworkshop");
+        // simple logging to console
+        // optionsBuilder.LogTo(Console.WriteLine);
+        // logging to console with log level
+        optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
+    }
+}
+```
 
 This code does a few things.
 
@@ -58,13 +75,28 @@ Your project should contain a Models folder with files that define the structure
 
 We will go into more depth later in this workshop, but here is an example of a data model class:
 
-![BookModel](image-5.png)
+```csharp
+public class Book
+{
+    public int id { get; set; }
+    public string title { get; set; }
+
+    public List<Author> Authors { get; } = new();
+}
+```
 
 ##### Program.cs
 
 Your project will have a `Program.cs` file, where you will work with your database by calling the `DbContext` and models you have defined. This is also where you connect your data access layer to a front-end application.
 
-![Program](image-7.png)
+```csharp
+using Microsoft.EntityFrameworkCore; //download Microsoft.EntityFrameworkCore.SqlServer
+
+await using var db = new LibraryContext();
+
+// Read
+Console.WriteLine("Querying");
+```
 
 #### What next?
 

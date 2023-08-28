@@ -7,7 +7,9 @@ In this approach, we work with the existing populated PostgreSQL database from [
 ## Scaffold your models with .NET CLI
 
 ```dotnetcli
+
 dotnet ef dbcontext scaffold "Data Source={ConnectionString}" Microsoft.EntityFrameworkCore.Npgsql --context-dir Data --output-dir Models
+
 ```
 
 This command:

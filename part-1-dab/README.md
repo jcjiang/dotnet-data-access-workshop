@@ -2,7 +2,7 @@
 
 ## What is Data API Builder (DAB)?
 
-![Data API Builder](https://devblogs.microsoft.com/cosmosdb/announcing-data-api-builder-for-azure-cosmos-db/) is a .NET command-line tool that lets you securely build simple CRUD APIs without writing code. It generates a configuration file with information about the data model, including classes and their relationships, which the CLI then uses to build the API.
+[Data API Builder](https://devblogs.microsoft.com/cosmosdb/announcing-data-api-builder-for-azure-cosmos-db/) is a .NET command-line tool that lets you securely build simple CRUD APIs without writing code. It generates a configuration file with information about the data model, including classes and their relationships, which the CLI then uses to build the API.
 
 ### Benefits of DAB
 
@@ -14,7 +14,7 @@ DAB does have its limitations. For example, it cannot be extended beyond Create,
 
 In this workshop, we first create our API with DAB in order to visualize and test our data classes and relationships before implementing them in code. We then build our API with EF Core for a data access layer that is more scalable, extensible, and powerful and allows for easier debugging, logging, and testing.
 
-If you are comfortable with code and are interested in building your API with EF Core to begin with, navigate to ![Part 2](part-2-efcore-debug-log-test/README.md).  
+If you are comfortable with code and are interested in building your API with EF Core to begin with, navigate to [Part 2](part-2-efcore-debug-log-test/README.md).  
 
 ### GraphQL vs. REST
 
@@ -30,8 +30,8 @@ The local PostgreSQL instance can be found at `library.postgresql.sql`.
 
 ## Setting up a local PostgreSQL database
 
-The remainder of this tutorial can be found on the ![Getting Started](https://learn.microsoft.com/en-us/azure/data-api-builder/get-started/get-started-azure-postgresql) page for DAB. This includes installation, populating your database, configuration, exposing your data, and using your API to create, read, update, and delete.
+The remainder of this tutorial can be found on the [Getting Started](https://learn.microsoft.com/en-us/azure/data-api-builder/get-started/get-started-azure-postgresql) page for DAB. This includes installation, populating your database, configuration, exposing your data, and using your API to create, read, update, and delete.
 
 At the completion of this tutorial, you should have a configuration file named `dab-config.json` that describes a data model with two classes, Author and Book, with many-to-one relationships between them - i.e. a book can have multiple authors and an author can have multiple books.
 
-Now that we have tested and validated our data model, we will implement the API using a DIY code-first solution with EF Core in ![Part 2](part-2-efcore-debug-log-test/README.md).
+Now that we have tested and validated our data model, we will implement the API using a DIY code-first solution with EF Core in [Part 2](part-2-efcore-debug-log-test/README.md).

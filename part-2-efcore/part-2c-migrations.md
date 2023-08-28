@@ -58,6 +58,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
+
 These commands do the following:
 
 - You install the tool and package you need to use migrations.

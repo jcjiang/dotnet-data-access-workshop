@@ -19,16 +19,15 @@ Part 2 - Connect to your database with EF Core
 
 - Version 17.4 or newer of Visual Studio 2022 or Visual Studio for Mac 2022
 
-and/or 
+and/or
 
-- .NET SDK 
+- .NET SDK
 
 ## Modules
 
 - [Part 0 - Intro to data access in .NET & Setup](/part-0-intro-setup/README.md)
 - [Part 1 - (no code!) Build a simple CRUD API with the Data API Builder CLI](/part-1-dab/README.md)
 - [Part 2 - Connect to your database with EF Core](/part-2-efcore/README.md)
-- [Part 3 - Query and manage your data with EF Core](/part-3-efcore-query-manage-data/README.md)
-- [Part 4 - Use your API in an application with EF Core](/part-4-efcore-connect/)
+- [Part 3 - Query and manage your data from a console app with EF Core](/part-3-efcore-query-manage-data/README.md)
 
 ## More links and resources

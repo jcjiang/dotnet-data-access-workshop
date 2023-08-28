@@ -8,15 +8,15 @@ The .NET ecosystem has a lot of options for developers looking to work with data
 
 ## Frequently Asked Questions (FAQ)
 
-Does using .NET (C#) mean I can only work with Microsoft tech?
+### Does using .NET (C#) mean I can only work with Microsoft tech?
 
 - .NET works with all major database management systems, even non-Microsoft options like SQLite and Oracle. In addition, it is open source and has a thriving community beyond Microsoft with a long history of contributing to and investing in the platform. For example, StackOverflow writes its data access layer in C# and built/maintains [Dapper](https://github.com/DapperLib/Dapper), one of the most popular tools for data access in .NET.
 
-Do I have to be a C# developer in order to start working with data using .NET?
+### Do I have to be a C# developer in order to start working with data using .NET?
 
 - Knowledge of C# will definitely be helpful, but there are ways to get started with little to no code and learn the language by building with it. .NET tools like EF Core let you choose how much to abstract so instead of learning everything just to get started, you can scale up your knowledge only when you need it.
 
-What are some examples of what can be built with a .NET data access layer?
+### What are some examples of what can be built with a .NET data access layer?
 
 - [Geocaching](https://www.youtube.com/watch?v=xKnW6llLyig) supports millions of users across the globe, as well as a mobile app with multiple websites, with a back-end built entirely on .NET APIs.
 
