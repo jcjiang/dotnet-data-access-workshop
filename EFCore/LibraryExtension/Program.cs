@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore; //download Microsoft.EntityFrameworkCore.SqlServer
 
-await using var db = new BloggingContext();
+await using var db = new LibraryContext();
 
 // Read
 Console.WriteLine("Querying");

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-public class BloggingContext : DbContext
+public class LibraryContext : DbContext
 {
     public DbSet<Book> books { get; set; }
     public DbSet<Author> authors { get; set; }
@@ -20,6 +20,8 @@ public class Book
 {
     public int id { get; set; }
     public string title { get; set; }
+
+    public List<Author> Authors { get; } = new();
 }
 
 public class Author
@@ -28,4 +30,6 @@ public class Author
     public string first_name { get; set; }
     public string? middle_name { get; set; }
     public string last_name { get; set; }
+
+    public List<Book> Books { get; } = new();
 }

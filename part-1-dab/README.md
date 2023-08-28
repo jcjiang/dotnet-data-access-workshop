@@ -12,7 +12,9 @@
 
 DAB does have its limitations. For example, it cannot be extended beyond Create, Read, Update, and Delete functionalities. It also does not allow for manipulation of the received query results.
 
-In this workshop, we first create our API with DAB in order to visualize and test our data classes and relationships before implementing them in code. We then build our API with EF Core for a data access layer that is more scalable, extensible, and powerful and allows for easier debugging, logging, and testing. If you are interested in building your API with EF Core to begin with, navigate to ![Part 2](part-2-efcore-debug-log-test/README.md).  
+In this workshop, we first create our API with DAB in order to visualize and test our data classes and relationships before implementing them in code. We then build our API with EF Core for a data access layer that is more scalable, extensible, and powerful and allows for easier debugging, logging, and testing.
+
+If you are comfortable with code and are interested in building your API with EF Core to begin with, navigate to ![Part 2](part-2-efcore-debug-log-test/README.md).  
 
 ### GraphQL vs. REST
 
