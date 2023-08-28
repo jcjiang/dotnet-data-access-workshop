@@ -1,4 +1,4 @@
-# Part 1 = Build a simple CRUD API with the Data API Builder CLI (no code!)
+# Part 1 - Build a simple CRUD API with the Data API Builder CLI (no code!)
 
 ## What is Data API Builder (DAB)?
 
@@ -32,4 +32,4 @@ The remainder of this tutorial can be found on the ![Getting Started](https://le
 
 At the completion of this tutorial, you should have a configuration file named `dab-config.json` that describes a data model with two classes, Author and Book, with many-to-one relationships between them - i.e. a book can have multiple authors and an author can have multiple books.
 
-Now that we have tested and validated our data model, we will implement the API using a DIY code-first solution in ![Part 2](part-2-efcore-debug-log-test/README.md).
+Now that we have tested and validated our data model, we will implement the API using a DIY code-first solution with EF Core in ![Part 2](part-2-efcore-debug-log-test/README.md).
