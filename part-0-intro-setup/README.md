@@ -4,7 +4,18 @@ Data access is at the core of all data work. At a high level, it includes gettin
 
 The .NET ecosystem has a lot of options for developers looking to work with data. Our tooling comes with longterm support and integrate seamlessly within the platform, as well as with other Microsoft offerings like Azure.
 
-## Download .NET tools
+## Prerequisites
+
+Before starting this tutorial, you should have a few things installed.
+
+- PC or Mac
+- [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- IDE of your choice, such as [Visual Studio Code](https://code.visualstudio.com/) (optional, if you want to look through the code)
+
+For Part 2, you will need:
+
+- [Version 17.4 or newer of Visual Studio 2022 or Visual Studio for Mac 2022](https://visualstudio.microsoft.com/downloads/)
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
 ## Frequently Asked Questions (FAQ)
 

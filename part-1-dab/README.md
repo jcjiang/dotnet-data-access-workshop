@@ -2,7 +2,7 @@
 
 ## What is Data API Builder (DAB)?
 
-[Data API Builder](https://devblogs.microsoft.com/cosmosdb/announcing-data-api-builder-for-azure-cosmos-db/) is a .NET command-line tool that lets you securely build simple CRUD APIs without writing code. It generates a configuration file with information about the data model, including classes and their relationships, which the CLI then uses to build the API.
+[Data API Builder](https://devblogs.microsoft.com/cosmosdb/announcing-data-api-builder-for-azure-cosmos-db/) is a .NET command-line tool that lets you securely build simple CRUD APIs without writing code. It works by generating a configuration file with information about the data model, including classes and their relationships, which the CLI then uses to build the API.
 
 ### Benefits of DAB
 

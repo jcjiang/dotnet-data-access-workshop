@@ -1,8 +1,8 @@
 # Step 2c - Create and populate a new database (Code-first)
 
-In this approach, we use the migrations feature of EF Core to make a new database by writing code by describes the contents (classes, tables, relationships.)
+In this approach, we use the migrations feature of EF Core to make a new database by writing code that describes the contents (classes, tables, relationships.) Our code will be the source of truth, with the database updated to match any changes we make to our code.
 
-First, we will define the data model classes and relationships of our database in our `Model.cs` file. EF Core will use this code to generate our database. 
+First, we will define the data model classes and relationships of our database in our `Model.cs` file. EF Core will use this code to generate our database.
 
 To get a deeper understanding of this code, check out [Part 2b: Hand code your data model](/part-2-efcore/part-2b-handcode.md).
 
@@ -48,15 +48,17 @@ public class Post
     public int BlogId { get; set; }
     public Blog Blog { get; set; }
 }
-``````
+```
 
 Now, we are ready to create and populate our database. Use the .NET CLI to run the following commands.
 
 ```dotnetcli
+
 dotnet tool install --global dotnet-ef
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet ef migrations add InitialCreate
 dotnet ef database update
+
 ```
 
 These commands do the following:
@@ -66,6 +68,8 @@ These commands do the following:
 - You create a new database and populate it with those tables.
 
 ## Inspect your database
+
+Let's take a look at what our database looks like.
 
 ## Next Steps
 

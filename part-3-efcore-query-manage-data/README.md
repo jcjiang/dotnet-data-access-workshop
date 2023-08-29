@@ -6,25 +6,25 @@ With the language-integrated query (LINQ) capabilities offered by EF Core, you c
 
 ```csharp
 
-using (var context = new BloggingContext())
+using (var context = new LibraryContext())
 {
-    var blogs = context.Blogs
-        .Where(b => b.Url.Contains("dotnet"))
+    var books = context.Books
+        .Where(b => b.Title.Contains("dotnet"))
         .ToList();
 }
 
 ```
 
-This code filters for all blogs with a URL containing "dotnet." `context` is the DbContext instance for this unit of work, which contains the `DbSet<Blog> Blogs`that we defined earlier in our `Model.cs` file. We then write code to search through the set and output the results to a list.
+Let's walk through this code together. This code filters for all books with a title containing "dotnet". `context` is the DbContext instance for this unit of work, which contains the `DbSet<Book> books`that we defined earlier in our `Model.cs` file. We then write code to search through the set and output the results to a list.
 
-## Create 
+## Create
 
 First, we will insert data into our database.
 
 ```csharp
 // Create
 Console.WriteLine("Inserting a new book");
-db.Add(new Book { Title = "" });
+db.Add(new Book { title = "" });
 db.SaveChanges();
 ```
 
@@ -35,7 +35,7 @@ Now, we will read the data inside of our database.
 ```csharp
 // Read
 Console.WriteLine("Querying for a book");
-var book = db.Books
+var book = db.books
     .OrderBy(b => b.id)
     .First();
 ```
@@ -63,3 +63,20 @@ Console.WriteLine("Delete the book");
 db.Remove(book);
 db.SaveChanges();
 ```
+
+## Running your application
+
+By now, your `Program.cs` file should look something like this:
+
+Now that you've written all the code, let's see what your data access layer looks like in action!
+
+```dotnetcli
+dotnet run
+```
+
+## Next Steps
+
+Now that you have created a data access layer in EF Core, you have a lot of options for how to build on your knowledge.
+
+- You can build a web app that uses your API using ASP.NET Core.
+- You can build a mobile app using .NET MAUI (formerly known as Xamarin.)
