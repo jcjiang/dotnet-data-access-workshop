@@ -17,6 +17,12 @@ For Part 2, you will need:
 - [Version 17.4 or newer of Visual Studio 2022 or Visual Studio for Mac 2022](https://visualstudio.microsoft.com/downloads/)
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
+## Next Steps
+
+If you would like to start with a no code approach to building a CRUD API, go to [Part 1](/part-1-dab/README.md). You will get to define and test your data model, which you can build off of with a more scalable DIY solution like EF Core.
+
+If you would like to start with code and build a CRUD API that integrates with a console app, go to [Part 2](/part-2-efcore/).
+
 ## Frequently Asked Questions (FAQ)
 
 ### Does using .NET (C#) mean I can only work with Microsoft tech?
