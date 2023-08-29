@@ -4,7 +4,7 @@ In this approach, we use the migrations feature of EF Core to make a new databas
 
 First, we will define the data model classes and relationships of our database in our `Model.cs` file. EF Core will use this code to generate our database.
 
-To get a deeper understanding of this code, check out [Part 2b: Hand code your data model](/part-2-efcore/part-2b-handcode.md).
+To get a deeper understanding of this code and what each part does, check out [Part 2b: Hand code your data model](/part-2-efcore/part-2b-handcode.md).
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
