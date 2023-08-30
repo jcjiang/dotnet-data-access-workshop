@@ -36,7 +36,7 @@ Now, we are ready to open our project folder and work with some code.
 
 #### Project Structure
 
-There are three important parts of every EF Core project.
+There are three important parts of every EF Core project. This is meant as a big picture overview - the next section will guide you through building each section in detail.
 
 ![Structure](image-4.png)
 

@@ -44,6 +44,6 @@ The remainder of this tutorial can be found on the [Getting Started](https://lea
 
 At the completion of this tutorial, you should have a configuration file named `dab-config.json` that describes a data model with two classes, Author and Book, with many-to-one relationships between them - i.e. a book can have multiple authors and an author can have multiple books. You can find an example in this repository at [dab-config.json](/dab-config.json).
 
-Now that we have tested and validated our data model, we will implement the API using a DIY code-first solution with EF Core in [Part 2](../part-2-efcore/README.md).
+Now that we have tested and validated our data model, we will implement the API using a DIY, code solution with EF Core in [Part 2](../part-2-efcore/README.md).
 
 If you want to keep building on your DAB API and see your data access layer in a published application, you can follow this tutorial on [how to build a Todo app with Azure Static Web Apps and Azure SQL Database](https://github.com/Azure-Samples/dab-swa-todo).
