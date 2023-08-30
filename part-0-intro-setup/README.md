@@ -1,27 +1,31 @@
 # Part 0 - Intro to data access in .NET
 
-Data access is at the core of all data work. At a high level, it includes getting data from a source (such as a database), modifying the data, and using that data somewhere else (such as a mobile or web application.) Data access can be as simple as storing information from an application or as complex as managing and maintaining a massive database with hundreds of thousands of relationships.
+Data access is at the core of all data work. 
 
-The .NET ecosystem has a lot of options for developers looking to work with data. Our tooling comes with longterm support and integrate seamlessly within the platform, as well as with other Microsoft offerings like Azure.
+At a high level, it includes getting data from a source (such as a database), modifying the data, and using that data somewhere else (such as a mobile or web application.) Data access can be as simple as storing information from an application or as complex as managing and maintaining a massive database with hundreds of thousands of relationships.
+
+The .NET ecosystem has a lot of options for developers looking to work with data. Our tooling comes with longterm support and integrate seamlessly within the .NET platform, as well as with other Microsoft offerings like Azure.
 
 ## Prerequisites
 
-Before starting this tutorial, you should have a few things installed.
+Before starting this tutorial, you should have a few things ready.
 
 - PC or Mac
 - [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- IDE of your choice, such as [Visual Studio Code](https://code.visualstudio.com/) (optional, if you want to look through the code)
+- [PostgreSQL](https://www.postgresql.org/docs/9.2/tutorial-install.html)
+- A way to create and work with PostgreSQL. We recommend [psql](https://www.postgresql.org/docs/9.6/app-psql.html), an interactive terminal.
+- IDE of your choice, such as [Visual Studio Code](https://code.visualstudio.com/) (optional, if you want to look through and modify the configuration file by hand)
 
-For Part 2, you will need:
+For Part 2, you will also need:
 
 - [Version 17.4 or newer of Visual Studio 2022 or Visual Studio for Mac 2022](https://visualstudio.microsoft.com/downloads/)
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 
 ## Next Steps
 
-If you would like to start with a no code approach to building a CRUD API, go to [Part 1](/part-1-dab/README.md). You will get to define and test your data model, which you can build off of with a more scalable DIY solution like EF Core.
+If you would like to start with a no code approach to building a CRUD API, go to [Part 1](/part-1-dab/README.md). You will get to define and test your data model, which you can use to create a more scalable, DIY solution like EF Core.
 
-If you would like to start with code and build a CRUD API that integrates with a console app, go to [Part 2](/part-2-efcore/).
+If you would like to start with code and build a CRUD API that integrates with a console app, go directly to [Part 2](../part-2-efcore/).
 
 ## Frequently Asked Questions (FAQ)
 
@@ -43,6 +47,6 @@ If you would like to start with code and build a CRUD API that integrates with a
 
 > “Instead of spending a lot of time debating theories and approaches with no prior experience to rely on, we had a working demo ready to drive decision making in minutes."
 
-- [The Postage]() is a startup that uses C# for full-stack web development so that the same developers can build every part of the product.
+- [The Postage](https://customers.microsoft.com/en-ca/story/1338933582129668706-the-postage-professional-services-azure) is a startup that uses C# for full-stack web development so that the same developers can build every part of the product.
 
 > ".NET let us use C# across the entire application stack, from front end to back end to mobile — an approach that has proven to be very effective in terms of both speed and cost."

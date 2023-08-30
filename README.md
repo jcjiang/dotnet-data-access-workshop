@@ -1,10 +1,10 @@
 # .NET Data Access - Workshop
 
-Today we will use .NET to build an API that can read, write, update, and delete data from a database, with the capacity to be scaled up to do much more. This workshop is hands on and designed to be completed in less than a day. 
+Today we will use .NET to build an API that can read, write, update, and delete data from a database, with the capacity to be scaled up to do much more. This workshop is hands on and designed to be completed in less than a day.
 
-We will guide you through building a simple CRUD API by using the Data API Builder command-line interface. This will help us define, visualize, and test our data model (i.e. classes and relationships) without having to write any code. Then, we will implement the same API using Entity Framework Core to build a solution that is extensible, can connect to any application, and offers strong debugging and testing capabilities.
+First, we will guide you through building a simple CRUD API by using the Data API Builder command-line interface. This will help us define, visualize, and test our data model (i.e. classes and relationships) without having to write any code. Then, we will implement the same API using Entity Framework Core to build a solution that is extensible, can connect to any application, and offers strong debugging and testing capabilities.
 
-Part 1 can be completed with little to no knowledge of code. Part 2 involves writing a small amount of C# code, but is designed to be understandable to anyone who has completed Part 1 and will teach you what you need to know.
+Part 1 can be completed with little to no knowledge of code. Part 2 involves writing a small amount of C# code, but is designed to be understandable to anyone who has completed Part 1 and will teach you what you need to know about writing C#.
 
 ## Modules
 

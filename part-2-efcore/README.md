@@ -2,7 +2,9 @@
 
 ## What is Entity Framework (EF) Core?
 
-[Entity Framework Core](https://learn.microsoft.com/en-us/ef/) is a .NET tool that lets you build clean, portable, and high-level data access layers that work with a variety of databases and application types. EF Core lets you take the same intuitive approach to working with all data - no need to learn database-specific knowledge like writing SQL queries.
+[Entity Framework Core](https://learn.microsoft.com/en-us/ef/) is a .NET tool that lets you build clean, portable, and high-level data access layers that work with a variety of databases and application types. 
+
+EF Core lets you take the same intuitive approach to working with all data - no need to learn database-specific knowledge like writing SQL queries.
 
 ### Benefits of EF Core
 
@@ -11,18 +13,18 @@
 - Data access layers written using EF Core integrate seamlessly with any C# application, from console to mobile. You can also write multiple applications on top of the same back-end!
 - EF Core offers important capabilities for application development, especially as you scale. These include debugging, logging, testing, change tracking, and much more.
 
-EF Core works great for a variety of scenarios, whether you have an existing database or need to create and populate a new database, or even if you are a beginner to C# and/or code.
+EF Core works great for a variety of scenarios - whether you have an existing database or need to create and populate a new database, or even if you are a beginner to C# and/or code.
 
 ### Step 1 - Set up a .NET project that uses EF Core
 
-Create a new .NET project named `EFDataLayer` using the CLI with this command:
+Create a new .NET project named `EFCore` using the CLI with this command:
 
 ```dotnetcli
-dotnet new console -o EFDataLayer
-cd EFDataLayer
+dotnet new console -o EFCore
+cd EFCore
 ```
 
-You can also create your project using Visual Studio.
+You can also create your project using the Visual Studio UI.
 
 Now, add the correct Entity Framework Core package to your project. Since we are using a PostgreSQL database, we download its provider.
 
@@ -42,7 +44,7 @@ There are three important parts of every EF Core project.
 
 An instance of the DbContext class represents a session of work with EF Core. In other words, it lets you define how you want to work with EF Core.
 
-Because our project is so simple, we will define our `DbContext` in the `Model.cs` file. The DbContext class for your project should look like this:
+Because our project is so simple, we will define our `DbContext` in the `Model.cs` file. The DbContext class for your project should something look like this:
 
 ```csharp
 
@@ -54,7 +56,7 @@ public class LibraryContext : DbContext
     // The following configures EF to use a locally hosted postgres database
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=dabworkshop");
+        optionsBuilder.UseNpgsql("{connectionString}");
         // simple logging to console
         // optionsBuilder.LogTo(Console.WriteLine);
         // logging to console with log level
@@ -65,15 +67,15 @@ public class LibraryContext : DbContext
 
 This code does a few things.
 
-- Define instances of `DbSet`, which will contain the queried data in the form of objects in sets.
-- Provide the connection string to the database you want to connect to.
+- Define instances of `DbSet`, which are sets that will be populated by the queried data in the form of objects.
+- Provide the connection string to the database you want to connect to. 
 - Configure how you want to work with EF Core - in this case, we turn on logging to help us debug.
 
 ##### Models
 
-Your project should contain a Models folder with files that define the structure of your data. Though in this example you will write all of your models in just one `Model.cs` file, with larger projects it is recommended to break up your models across multiple files.
+Your project should contain a Models folder with files that define the structure of your data. Though in this example you will define all of your models in just one `Model.cs` file, with larger projects it is recommended to break up your models across multiple files.
 
-We will go into more depth later in this workshop, but here is an example of a data model class:
+We will go into more depth into this code later in this workshop, but here is an example of a data model class:
 
 ```csharp
 public class Book
@@ -100,7 +102,9 @@ Console.WriteLine("Querying");
 
 #### What next?
 
-- If you are working with an existing database and want to get started quickly, consider [reverse engineering your database](/part-2-efcore/step-2a-scaffolding.md) to generate your classes and tables from just a connection string. 
+Now that you have some insight into how EF Core works, let's write some code!
+
+- If you are working with an existing database and want to get started quickly, consider [reverse engineering your database](/part-2-efcore/part-2a-scaffolding.md) to generate your classes and tables from just a connection string.
 - If you are working with an existing database but want more guidance on transitioning from DAB to EF Core, consider [hand coding your data models](/part-2-efcore/part-2b-handcode.md).
 - To create and populate a new database (for example, if you did not complete Part 1) consider [using migrations](/part-2-efcore/part-2c-migrations.md) to generate a database from your classes and tables quickly. The feature is similar to the `git` model for version control.
 
